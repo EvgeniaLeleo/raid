@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Item } from '../../components/Item'
 
+import { Item } from '../../components/Item'
 import { URL_API } from '../../constants'
 
 import style from './style.module.css'
