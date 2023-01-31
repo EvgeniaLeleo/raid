@@ -6,8 +6,10 @@ import style from './style.module.css'
 type Props = { itemName: string }
 
 export const Item: FC<Props> = ({ itemName }) => {
+  const lowerCaseName = itemName.toLowerCase()
+
   return (
-    <Link to={`/single.html/${itemName}`} className={style.item}>
+    <Link to={`/single.html?s=${lowerCaseName}`} className={style.item}>
       {itemName}
     </Link>
   )

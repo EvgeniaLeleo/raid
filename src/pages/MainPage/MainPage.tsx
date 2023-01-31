@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useQuery } from 'react-query'
 
 import { Item } from '../../components/Item'
 import { URL_API } from '../../constants'
@@ -8,38 +9,31 @@ import style from './style.module.css'
 export const MainPage = () => {
   const [items, setItems] = useState<string[]>([])
 
-  const [appState, setAppState] = useState({
-    loading: true,
-    error: false,
-  })
+  const { isLoading, isError, data } = useQuery('itemsData', () =>
+    fetch(URL_API).then((response) => response.json())
+  )
 
   useEffect(() => {
-    fetch(URL_API)
-      .then((response) => response.json())
-      .then((data) => {
-        setItems(data.items)
-        setAppState({ loading: false, error: false })
-      })
-      .catch((error) => {
-        console.log(error)
-        setAppState({ loading: false, error: true })
-      })
-  }, [setAppState])
+    if (data?.items.length) {
+      setItems(data.items)
+      return
+    }
+  }, [data])
 
   return (
     <div className={style.main}>
       <ul className={style.list}>
-        {appState.loading && <div>Загрузка данных...</div>}
+        <>
+          {isLoading && <div>Загрузка данных...</div>}
 
-        {appState.error && (
-          <div>Произошла ошибка, не удалось загрузить данные!</div>
-        )}
+          {isError && <div>Произошла ошибка, не удалось загрузить данные!</div>}
 
-        {items.map((item, index) => (
-          <li className={style.listItem} key={index + item}>
-            <Item itemName={item} />
-          </li>
-        ))}
+          {items.map((item, index) => (
+            <li className={style.listItem} key={index + item}>
+              <Item itemName={item} />
+            </li>
+          ))}
+        </>
       </ul>
     </div>
   )
