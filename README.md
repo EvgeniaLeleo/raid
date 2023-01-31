@@ -39,7 +39,7 @@ npm run build
 
 - [x] при открытии этой страницы можно увидеть текст:
 
-<span style="color:blue">This _is_ page _for_ alpha</span>
+This <font color='#07a'>is</font> page <font color='#07a'>for</font> alpha
 
 ### Работа приложения
 
