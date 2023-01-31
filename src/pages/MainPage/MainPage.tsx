@@ -3,13 +3,14 @@ import { useQuery } from 'react-query'
 
 import { Item } from '../../components/Item'
 import { URL_API } from '../../constants'
+import { Data, Items } from '../../types'
 
 import style from './style.module.css'
 
 export const MainPage = () => {
-  const [items, setItems] = useState<string[]>([])
+  const [items, setItems] = useState<Items>([])
 
-  const { isLoading, isError, data } = useQuery('itemsData', () =>
+  const { isLoading, isError, data } = useQuery<Data>('itemsData', () =>
     fetch(URL_API).then((response) => response.json())
   )
 

@@ -9,7 +9,7 @@ export const Item: FC<Props> = ({ itemName }) => {
   const lowerCaseName = itemName.toLowerCase()
 
   return (
-    <Link to={`/single.html?s=${lowerCaseName}`} className={style.item}>
+    <Link to={`/single.html/${lowerCaseName}`} className={style.item}>
       {itemName}
     </Link>
   )

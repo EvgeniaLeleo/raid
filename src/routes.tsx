@@ -8,7 +8,7 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path=":item" element={<ItemPage />} />
+      <Route path="/single.html/:item" element={<ItemPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
