@@ -1,0 +1,26 @@
+.main {
+  padding-top: 10vh;
+  padding-bottom: 30vh;
+  padding-left: calc(96px + env(safe-area-inset-left));
+  padding-right: calc(96px + env(safe-area-inset-right));
+}
+
+.list {
+  list-style: none;
+
+  min-height: 186px;
+  padding: 34px 16px 32px 32px;
+  margin: 0;
+  box-sizing: border-box;
+
+  background-color: #f7f6f3;
+
+  overflow-x: auto;
+}
+
+.listItem:before {
+  content: '*';
+
+  color: #9a6e3a;
+  margin-right: 0.5em;
+}

@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
 
-import { ItemPage } from './pages/ItemPage/ItemPage';
-import { MainPage } from './pages/MainPage/MainPage';
-import { NotFound } from './pages/NotFound/NotFound';
+import { ItemPage } from './pages/ItemPage/ItemPage'
+import { MainPage } from './pages/MainPage/MainPage'
+import { NotFound } from './pages/NotFound/NotFound'
 
 export const AppRoutes = () => {
   return (
@@ -11,5 +11,5 @@ export const AppRoutes = () => {
       <Route path="/single.html/:item" element={<ItemPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  );
-};
+  )
+}

@@ -1,0 +1,17 @@
+.notFoundPage {
+  padding-top: 10vh;
+  padding-bottom: 30vh;
+  padding-left: calc(96px + env(safe-area-inset-left));
+  padding-right: calc(96px + env(safe-area-inset-right));
+}
+
+.textWrapper {
+  min-height: 87px;
+  padding: 34px 16px 32px 32px;
+  margin: 0;
+  box-sizing: border-box;
+
+  background-color: #f7f6f3;
+
+  overflow-x: auto;
+}
