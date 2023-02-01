@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
 
+import { PageWrapper } from '../PageWrapper/PageWrapper'
 import { Item } from '../../components/Item'
 import { URL_API } from '../../constants'
 import { Data, Items } from '../../types'
@@ -22,7 +23,7 @@ export const MainPage = () => {
   }, [data])
 
   return (
-    <div className={style.main}>
+    <PageWrapper>
       <ul className={style.list}>
         <>
           {isLoading && <div>Загрузка данных...</div>}
@@ -36,6 +37,6 @@ export const MainPage = () => {
           ))}
         </>
       </ul>
-    </div>
+    </PageWrapper>
   )
 }
