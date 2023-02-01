@@ -1,4 +1,4 @@
-import { useParams, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 import { PageWrapper } from '../PageWrapper/PageWrapper'
 import { TextWrapper } from '../../components/TextWrapper/TextWrapper'
