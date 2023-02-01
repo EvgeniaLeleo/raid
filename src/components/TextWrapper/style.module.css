@@ -1,0 +1,9 @@
+.textWrapper {
+  padding: 34px 16px 32px 32px;
+  margin: 0;
+  box-sizing: border-box;
+
+  background-color: #f7f6f3;
+
+  overflow-x: auto;
+}
