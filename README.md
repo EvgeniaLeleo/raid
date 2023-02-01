@@ -1,4 +1,4 @@
-# Тестовое задание
+# Тестовое задание Raid
 
 [Demo](https://raid-leleo.onrender.com/)
 
@@ -25,7 +25,7 @@ npm run build
 
 ## Структура и функционал приложения
 
-- [x] выведены данные, размещенные на сервере [https://www.npoint.io/](https://www.npoint.io/docs/731af617ad7c16f88337)
+- [x] на главной странице выводятся данные, размещенные на сервере [https://www.npoint.io/](https://www.npoint.io/docs/731af617ad7c16f88337)
 
 ```sh
 * Alpha
