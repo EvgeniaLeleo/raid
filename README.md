@@ -55,5 +55,6 @@ This is page for alpha
 
 - [x] React
 - [x] React Query
-- [x] React Router DOM, реализация routing
+- [x] React Router DOM
+- [x] Eslint, Prettier
 - [x] TypeScript
