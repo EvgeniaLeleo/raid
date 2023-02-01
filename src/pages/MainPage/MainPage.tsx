@@ -25,7 +25,7 @@ export const MainPage = () => {
 
   return (
     <PageWrapper>
-      <TextWrapper minHeight={'186px'}>
+      <TextWrapper>
         <ul className={style.list}>
           <>
             {isLoading && <div>Загрузка данных...</div>}
